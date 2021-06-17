@@ -28,7 +28,7 @@ function App() {
   const [expenses, setExpenses] = useState(DummyExpenses);
   console.log("expenses = " + expenses);
   if (expenses.length === 0) {
-    Axios.get("http://localhost:3000/mymethod")
+    Axios.post("http://localhost:3000/saveExpense")
       .then((response) => {
         setExpenses(response.data);
       })
